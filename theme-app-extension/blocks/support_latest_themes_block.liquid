@@ -1,0 +1,20 @@
+{% render 'sd_subscription_helper' %}
+  {% if request.design_mode %}
+    <script>
+     var loaded_variant = {{ product.selected_or_first_available_variant.id }};
+     var productId = {{ product.id }};
+     var product_variants = '{{ product.variants | json }}';
+    </script>
+  {% endif %}
+  <script>
+  var theme_block_supported = '{{ app.metafields.theme_support.support_theme_block }}';
+  console.log('theme_block_supported', theme_block_supported);
+  </script>
+{% schema %}
+{
+  "name": "Your_App_Name",
+  "target": "head",
+  "javascript": "advanced.subscription.min.js",
+  "stylesheet": "subscription.min.css"
+}
+{% endschema %}

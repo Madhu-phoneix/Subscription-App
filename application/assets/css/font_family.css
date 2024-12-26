@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 400;
+    src: local('../fonts/Muli Regular'), url('../fonts/Muli-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 100;
+    src: local('../fonts/Muli ExtraLight'), url('../fonts/Muli-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 300;
+    src: local('../fonts/Muli Light'), url('../fonts/Muli-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 600;
+    src: local('../fonts/Muli SemiBold'), url('../fonts/Muli-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 700;
+    src: local('../fonts/Muli Bold'), url('../fonts/Muli-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 800;
+    src: local('../fonts/Muli ExtraBold'), url('../fonts/Muli-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 900;
+    src: local('../fonts/Muli Black'), url('../fonts/Muli-Black.woff') format('woff');
+}
+
+body, span, a, strong, p, div, td, th, button {
+    font-family: 'Muli';
+}

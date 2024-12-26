@@ -1,0 +1,1 @@
+{"shop_id":65218871512,"shop_domain":"maison-joliette-store.myshopify.com","customer":{"id":8715275567431,"email":"anne-marie.curtet@laposte.net","phone":null},"orders_to_redact":[6379343774023]}

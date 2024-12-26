@@ -1,0 +1,83 @@
+<script id="sd-subscription-helper">
+              let SDSubscriptionConfig =   {};
+				SDSubscriptionConfig.shop = "{{shop.permanent_domain}}";
+				{% if product %}
+				SDSubscriptionConfig.product = {{ product | json }};
+				SDSubscriptionConfig.selling_plans = {};
+				SDSubscriptionConfig.selling_plans.list ={};
+               SDSubscriptionConfig.variant  = {};
+			     {% assign filterGroupIds = '' %}
+			  {% assign filtered_selling_plan_group = product.selling_plan_groups | where: "app_id", "enter_your_id" %}
+				{% for selling_plan_group  in filtered_selling_plan_group %}
+					 {% assign sd_selling_plan_group = selling_plan_group.id %}
+					{% assign filterGroupIds = filterGroupIds | append: selling_plan_group.id %}
+                    {% unless forloop.last %}
+                        {% assign filterGroupIds = filterGroupIds | append: ',' %}
+                    {% endunless %}
+					{% for selling_plan in selling_plan_group.selling_plans %}
+						   {% for option in selling_plan.options %}
+							{% assign option_name =  option.name  %}
+							   {% assign option_position =  option.position %}
+							 {% assign option_value =  option.value %}
+						{% endfor %}
+                          price_adjustments = {};
+						  {% for price_adjustment in selling_plan.price_adjustments %}
+							{% assign orders_count =  price_adjustment.order_count  %}
+							   {% assign position =  price_adjustment.position %}
+							 {% assign value =  price_adjustment.value %}
+							  {% assign type =  price_adjustment.value_type %}
+
+							  price_adjustments.position_{{position}} = {
+								"position":"{{ position }}",
+								"value":"{{ value }}",
+								"type":"{{ type }}",
+								"order_count":"{{ orders_count }}"
+							}
+                        {% endfor %}
+
+					    SDSubscriptionConfig.selling_plans.list.ID_{{selling_plan.id}} = {
+						   "name": "{{ selling_plan.name }}",
+							"description": "{{ selling_plan.description }}",
+							"recurring_deliveries" :"{{selling_plan.recurring_deliveries}}",
+							"options": {
+								"name":"{{option_name}}",
+								"position":"{{ option_position }}",
+								"value":"{{ option_value }}",
+							},
+							"price_adjustment":price_adjustments,
+					   };
+
+					 {% endfor %} <!-- selling_plan_group -->
+					 {% endfor %} <!-- filtered_selling_plan_group -->
+
+				   {% for variant in product.variants %}
+
+					  SDSubscriptionConfig.variant.VID_{{variant.id}} = {
+						"variantIndexOfProduct" : {{forloop.index | minus: 1 }},
+						 "inventory_quantity" :  {{ variant.inventory_quantity }},
+						 "variant_available" : {{ variant.available }},
+                        "onetimepurchaseprice" : "{{ variant.price | money_with_currency }}"
+					  };
+						   SDSubscriptionConfig.variant.VID_{{variant.id}}.allocations = {};
+						 SDSubscriptionConfig.variant.VID_{{variant.id}}.allocations.selling_plans = {};
+						 SDSubscriptionConfig.variant.VID_{{variant.id}}.allocations.selling_plans.list = {};
+					 {% for selling_plan_allocation in variant.selling_plan_allocations %}
+						   {% if filterGroupIds contains selling_plan_allocation.selling_plan_group_id  %}
+							 {% assign selling_plan_id = selling_plan_allocation.selling_plan.id %}
+							   {% assign selling_plan_allocation_price = selling_plan_allocation.price | money_with_currency | json %}
+								  {% assign selling_plan_allocation_compare_at_price = selling_plan_allocation.compare_at_price | money_with_currency | json %}
+								  {% assign per_delivery_price_formatted = selling_plan_allocation.per_delivery_price | money_with_currency | json %}
+								  SDSubscriptionConfig.variant.VID_{{variant.id}}.allocations.selling_plans.list.ID_{{selling_plan_id}}={
+									 "price":{{ variant.price | money_with_currency | json }},
+									 "price_formatted":{{ variant.price | money_with_currency | json }},
+									 "pa_per_delivery_price_formatted" : {{ per_delivery_price_formatted }},
+									 "pa_selling_plan_allocation_price" : {{ selling_plan_allocation_price }},
+									 "pa_selling_plan_allocation_compare_at_price" : {{ selling_plan_allocation_compare_at_price }},
+									 "plan_description" : {{ selling_plan_allocation.selling_plan.description | json }},
+	                                 "checkout_charge_amount" : {{ selling_plan_allocation.checkout_charge_amount }}
+								 }
+							{% endif %}
+					 {% endfor %}
+				 {% endfor %}
+			  {% endif %}
+			</script>

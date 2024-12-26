@@ -1,0 +1,14 @@
+<div id="advanced-subscription-block-wrapper">
+
+</div>
+<script>
+var theme_block_supported = '{{ app.metafields.theme_support.support_theme_block }}';
+console.log('theme_block_supported', theme_block_supported);
+</script>
+{% schema %}
+  {
+    "name": "You_App_Name",
+    "templates": ["product"],
+    "target": "section"
+  }
+{% endschema %}

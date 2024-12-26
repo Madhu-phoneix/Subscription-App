@@ -1,0 +1,453 @@
+/* template 3 css start */
+.sd_widget_mainwrapper .offer_price h2 {text-align: right;}
+.offer_price label{
+    cursor: pointer;
+}
+.template_3 .sub_cards {
+    width: 50%;
+    margin: auto;
+}
+.template_3 .innercards {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+.template_3 .sub_cards .First {
+text-align: center;
+}
+.template_3 .sub_cards .First h3, .sd_widget_mainwrapper h5 {
+    margin: 0;
+    line-height: 1.6;
+}
+.template_3 .sub_cards .First h5 {
+    background-color: #d795b4;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+.template_3 div#sd_plan_description{
+    margin-top: 6px;
+}
+.template_3 .innercards:nth-child(2)  .First h5 {
+    background-color: #f8dc94;
+    color: #800000;
+}
+.template_3 .innercards:nth-child(4)  .First h5 {
+    background-color: #e37aa1;
+    color: #fff;
+}
+/* template 3 css end */
+
+.Polaris-Avatar, .panel, .template_1 .sd_subscription_wrapper, .template_2 .sd_subscription_wrapper {
+    overflow: hidden;
+}
+
+#advanced-subscription-block-wrapper div:empty,#advanced-subscription-block-wrapper span:empty,.sd_widget_mainwrapper div:empty,.sd_widget_mainwrapper span:empty{
+    display: none;
+}
+
+.Polaris-Frame-Toast .Polaris-Frame-Toast__CloseButton .Polaris-Icon__Svg, .Polaris-Frame-Toast .Polaris-Spinner svg, .sd_productListing .Polaris-Button.Polaris-Button--primary svg path {
+    fill: #fff;
+}
+.Polaris-Button, .Polaris-Label__Text {
+    -webkit-tap-highlight-color: transparent;
+}
+.sd_widget_mainwrapper h1, .sd_widget_mainwrapper h2, .sd_widget_mainwrapper h3, .sd_widget_mainwrapper h4, .sd_widget_mainwrapper h5, .sd_widget_mainwrapper h6, .sd_widget_mainwrapper p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+@keyframes Polaris-Spinner--loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.subscription_mini_inner_wrapper .Polaris-Tag img {
+    margin-bottom: 0;
+    height: 20px;
+}
+
+.Polaris-Tabs__Panel--hidden, .display-hide-label {
+    display: none!important;
+}
+
+#MainContent .main-page-title {
+    margin-bottom: 25px;
+}
+
+.template_1 .sd_widget_mainwrapper {
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.sd_widget_title {
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+.sd_subscription_wrapper_option {
+    box-shadow: 0 0 2pxrgb(0 0 0 / 7%);
+}
+
+.template_1 label.sd_radio_label {
+    padding-left: 28px;
+}
+.sd_subscription_label_wrapper, .template_3 .innercards {
+    cursor: pointer;
+}
+label.sd_radio_label {
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 500;
+}
+ .activemethod .sd_subscription_label_wrapper .sd_radio_label {
+    font-weight: 600;
+}
+.template_1 label.sd_radio_label::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #f0f2f5;
+    border: 1px solid #d7d7d7;
+    border-radius: 50%;
+    top: 0px;
+    left: 0;
+    transition: border-color .4s;
+    transform: translate(0);
+}
+.template_1 label.sd_radio_label::after {
+    content: "";
+    position: absolute;
+    border: solid #0c0b0b;
+    border-width: 0 2px 2px 0;
+    top: 4px;
+    left: 6px;
+    transform: rotate(46deg) scale(0);
+    height: 9px;
+    width: 6px;
+    transition: .4s ease-in-out;
+}
+.template_1 .sd_purchase_options[type=radio]:checked+.sd_radio_label::before {
+    border-color: #424242;
+}
+.template_1  .sd_purchase_options[type=radio]:checked+.sd_radio_label::after {
+    transform: rotate(46deg) scale(1);
+}
+.selected_subscription_wrapper {
+    font-size: 20px;
+}
+.selected_price_wrapper {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.template_2 .selected_price_wrapper{
+    padding: 7px 5px;
+}
+
+.template_1 .selected_price_wrapper{
+    padding: 13px 25px;
+}
+
+.template_1 .selected_price{
+    font-size: 20px;
+}
+
+.template_2 .selected_price{
+    font-size: 15px;
+}
+
+.selected_price {
+    display: inline-block;
+    line-height: normal;
+    font-weight: 600;
+    letter-spacing: 0;
+    /* color: #33353e; */
+    vertical-align: middle;
+    margin-right: 2px;
+}
+.sd_select_label {
+    display: block;
+     font-size: 13px;
+    /* color: #424242; */
+    line-height: 16px;
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing:  0.4px;
+}
+.template_1 .sd_subscription_label_wrapper .radio_discount_wrapper  {
+     padding:  20px 25px;
+}
+.template_2 .sd_subscription_label_wrapper .radio_discount_wrapper  {
+    padding: 7px 8px;
+}
+
+.sd_frequency_plan_option_wrapper  {
+     padding:  0px 25px 13px;
+ }
+.template_1 .radio_discount_wrapper .sd_purchase_options {
+    vertical-align: middle;
+    margin-top: 0;
+    display: none;
+}
+
+.template_3 .sd_purchase_options{
+   display: none;
+}
+
+.template_3 div#sd_totalPayableAmount {
+    padding: 10px;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+span.cut_original_price {
+    text-decoration: line-through;
+    font-size: 16px;
+    margin: 0 8px 0 0;
+}
+
+.template_2 .sd_label_discount_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.template_2 .sd_subscription_wrapper_option{
+    margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.template_2 .sd_subscription_label_wrapper{
+    border-radius: 6px;
+}
+
+.template_2 .sd_subscription_wrapper_option .sd_select, .template_2 #sd_subscriptionAllOptionsWrapper .sd_radio_label {
+    margin: 15px 0px;
+    padding: 6px 8px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    background: transparent;
+    border-right: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    box-shadow: none;
+}
+
+select.sd_single_option {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+    pointer-events: none;
+    background: transparent;
+    border: none;
+}
+.sd_cards_options {
+    border-radius: 10px;
+}
+
+.template_2 #sd_subscriptionAllOptionsWrapper .sd_radio_label {
+    font-weight: normal;
+    display: block;
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+    min-height: 1.2em;
+    cursor: context-menu;
+    font-size: 15px;
+}
+
+.template_1 .sd_subscription_wrapper_option .sd_select {
+    margin-top: 4px;
+    padding: 6px 8px;
+    font-size: 13px;
+    /* color: #4e4e4e; */
+    width: 100%;
+    margin-bottom: 9px;
+    box-shadow: none;
+    outline: 0;
+    border-radius: 3px;
+    border-color: #d6d6d6;
+    padding-right: 20px;
+    background-position: 98% 50%;
+}
+.sd_discount_ribbon {
+    font-size: 13px;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 600;
+    /* color: #f94556; */
+    margin-right: 5px;
+    padding: 0px 3px;
+    border: 1px solid;
+    display: inline-block;
+    border-radius: 3px;
+}
+div#sd_plan_description {
+    padding: 16px 25px 14px;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.template_1 div#sd_plan_description {
+    padding: 16px 25px 14px;
+}
+
+.template_2 div#sd_plan_description {
+    padding: 1px 0px 14px;
+}
+
+.template_1 div#sd_totalPayableAmount {
+  padding: 14px 25px 14px;
+}
+
+.template_2 div#sd_totalPayableAmount {
+    padding: 10px 2px 14px
+}
+
+div#sd_totalPayableAmount {
+    font-size: 13px;
+    /* color: #222222; */
+    font-weight: 600;
+}
+ div#sd_plan_description span {
+    display: block;
+    line-height: 19px;
+    font-size: 12px;
+    letter-spacing: .5px;
+    padding: 0;
+    font-weight:  400;
+}
+div#sd_plan_description h1, div#sd_plan_description h1>span {
+    font-size: 14px;
+    font-weight:  600;
+    margin-bottom: 5px;
+}
+
+.rte ul {
+    padding: 0!important;
+    margin-left: 0;
+    list-style: none;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sd_subscriptionPrc {
+    position: relative;
+    /* margin: 18px 0; */
+}
+.sd_recurringMsg {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.sd_recurringMsg img {
+    max-width: 21px;
+    vertical-align: middle;
+}
+.sd_subscriptionPrc.sd_description_tooltip .Polaris-PositionedOverlay {
+    padding: 20px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    left: 0;
+    color: #fff;
+    transition: transform .2s cubic-bezier(.215,.61,.355,1);
+    -ms-transform: translateY(0);
+    transform: translateY(100%) scaleY(0);
+    transform-origin: center top;
+    opacity: 0;
+    position: absolute;
+    bottom: 1px;
+    min-width: 300px;
+    max-width: 300px;
+    font-size: 12px;
+}
+.sd_subscriptionPrc.sd_description_tooltip .Polaris-PositionedOverlay::before {
+    content: "";
+    border-bottom: 9px solid #3a3a3a;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    z-index: 99999;
+    position: absolute;
+    top: -8px;
+    left: 8px;
+}
+.sd_subscriptionPrc.sd_description_tooltip .sd_recurringMsg:hover ~ .Polaris-PositionedOverlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(100%) scaleY(1);
+    bottom: -8px;
+    z-index: 99999999;
+}
+.sd_subscriptionPrc .Polaris-PositionedOverlay h1 {
+    font-weight: 600;
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.sd_subscription_link {
+    text-align: right;
+}
+.sd_subscription_link a {
+    background-color: #000;
+    border-radius: 60px;
+    text-align: center;
+    padding: 4px 15px;
+    display: inline-block;
+    margin-top: 15px;
+    justify-content: flex-end;
+    color: #fff;
+    text-decoration: none;
+}
+.subscription-shine-logo {
+    max-width: 90px;
+    vertical-align: middle;
+}
+
+#sd_manageSubscription {
+    padding: 5px 10px;
+    background-color: black;
+    color: #fff;
+    margin: 11px 0px;
+}
+
+/* 11 jan */
+div#sd_subscriptionPrc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*  11 jan end */

@@ -1,0 +1,32 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "Advanced Subscriptions App"
+client_id = "afd435f009f75672cc511615763db00d"
+application_url = "https://your-domain.com/admin/install.php"
+embedded = false
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_translations,read_themes,read_products,write_products,read_customers,write_customers,read_orders,write_orders,read_own_subscription_contracts,write_own_subscription_contracts,read_customer_payment_methods,read_shopify_payments_accounts,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders,read_third_party_fulfillment_orders,write_third_party_fulfillment_orders"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://your-domain.com/admin/memberPlans.php?billingStatus=unattempted"
+]
+
+[webhooks]
+api_version = "2023-01"
+
+[webhooks.privacy_compliance]
+customer_deletion_url = "https://your-domain.com/application/webhooks/GDPR/customers_redact.php"
+customer_data_request_url = "https://your-domain.com/application/webhooks/GDPR/customers_request.php"
+shop_deletion_url = "https://your-domain.com/application/webhooks/GDPR/shop_redact.php"
+
+[app_proxy]
+url = "https://your-domain.com/admin/subscription/subscriptions.php"
+subpath = "your-subscriptions"
+prefix = "apps"
+
+[pos]
+embedded = false

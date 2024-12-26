@@ -1,0 +1,12 @@
+<?php
+$store = $_GET['shop'];
+$SHOPIFY_APIKEY = 'fea45bbf921402073b351e2b0ff5a979';
+$SHOPIFY_SCOPES = 'read_orders';
+$SHOPIFY_REDIRECT_URI = 'https://www.shinedezigninfotech.com/embed_subscription/admin/login.php';
+// $install_action_url = "https://{$store}/admin/oauth/authorize?client_id={$SHOPIFY_APIKEY}&scope={$SHOPIFY_SCOPES}&redirect_uri={$SHOPIFY_REDIRECT_URI}"; // oath Screen
+// header("Location: ".$install_action_url);
+
+
+
+
+echo "<script type='text/javascript'>open('/subscription/admin/test.php', '_self'); </script>";
